@@ -22,13 +22,18 @@ module.exports = {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: { color: '#f0f' },
 
   /*
   ** Global CSS
   */
   css: [
+    '~/assets/css/reset.styl',
   ],
+  styleResources: {
+    // stylus
+    stylus: ['~/assets/css/base.styl']
+  },
 
   /*
   ** Plugins to load before mounting the App
@@ -41,6 +46,7 @@ module.exports = {
   */
   modules: [
     '@nuxtjs/pwa',
+    '@nuxtjs/style-resources',
   ],
 
   /*
