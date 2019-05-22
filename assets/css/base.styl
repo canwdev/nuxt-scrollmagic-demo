@@ -1,5 +1,76 @@
-$theme_color = #f0f
+$theme_color = #00b0ff
 $shallow_grey = #E0E0E0
 
 // media query
 Phone = "screen and (max-width: 567px)"
+
+$mobile_height_land = 485px // 手机横屏高度
+$tablet_width = 1024px // 768px
+$pcmin_width = 1450px // 1440px
+$pc2k_width = 2400px // 2560px
+
+// Common Style
+.container
+  width 1200px
+  margin 0 auto
+  @media screen and (max-width 1200px)
+    width 98%
+  @media screen and (max-width $tablet_width)
+    width 100%
+
+.page-common
+  .section-row
+    .bg-layer, .fg-layer
+      position: absolute
+      top 0
+      left 0
+      width 100%
+      height 100%
+      z-index 0
+
+    .bg-layer
+      overflow: hidden
+
+    &.bg-grey
+      background $shallow_grey
+
+    &.fcenter
+      display flex
+      align-items center
+
+    &.fvh
+      height 100vh
+    &.fvh2
+      height 200vh
+
+    .intro
+      width: $w789
+      margin 0 auto
+      font-size: 30px
+      line-height: 1.6
+      @media screen and (max-width $pcmin_width)
+        font-size 28px
+      @media screen and (max-width: $tablet_width)
+        width 82%
+      @media Phone
+        width 82%
+        font-size 15px
+        font-weight 600
+        text-align left
+
+      h1
+        font-weight: bold
+        font-size 60px
+        line-height: 1.2
+        margin-bottom: 40px
+        @media screen and (max-width $pcmin_width)
+          font-size 50px
+        @media Phone
+          font-size 30px
+          margin-bottom: 20px
+      b
+        font-weight: 900
+
+      p.mb
+        margin-bottom: 40px
+

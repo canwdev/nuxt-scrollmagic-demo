@@ -5,7 +5,7 @@
   "author": "canwdev",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "dev": "nuxt -o",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate"
