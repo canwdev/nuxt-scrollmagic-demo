@@ -47,27 +47,33 @@
       </div>
     </div>
 
-    <div class="section-row fvh2 bg-grey section--03">
-      <div class="bg-layer">
+    <div class="section-row bg-grey section--03">
+      <div class="sticky">
         <div class="container">
-          <div class="box"></div>
+          <div class="box box1"></div>
+          <div class="box box2"></div>
         </div>
       </div>
 
-      <div class="fg-layer">
+      <div class="content">
         <div class="container">
           <div class="intro">
             <h1>03. 生，沒有錢，早起的蟲蟲被鳥吃。</h1>
-            <p>
-              他那資質的敏慧，這次我再來歐洲你已經早一個星期回去，誰不曾擁著半夜的孤衾飲泣？別人可以拷貝我的模式，誠信絕對不是一種銷售，記住，創業時期千萬不要找明星團隊，就要找一群人去寫，現在颱風帶來的風，如果九二一發生在台北市，但並不編列特別預算，可是這裡面很多都無關，還要求發卡公司要寄送帳單，以後不會有哪一個政黨、哪一位委員、或哪一個政府部門，這都不是事實，還是將來要用另外一套系統，不會去考慮調漲香菸的價錢以做為來源。</p>
+            <p>他那資質的敏慧，這次我再來歐洲你已經早一個星期回去，誰不曾擁著半夜的孤衾飲泣？別人可以拷貝我的模式，誠信絕對不是一種銷售，記住，創業時期千萬不要找明星團隊，就要找一群人去寫，現在颱風帶來的風，如果九二一發生在台北市，但並不編列特別預算，可是這裡面很多都無關，還要求發卡公司要寄送帳單，以後不會有哪一個政黨、哪一位委員、或哪一個政府部門，這都不是事實，還是將來要用另外一套系統，不會去考慮調漲香菸的價錢以做為來源。</p>
           </div>
         </div>
       </div>
+
     </div>
+
+
+    <div class="section-row fvh"></div>
   </div>
 </template>
 
 <script>
+  import {mapState} from 'vuex'
+
   if (process.client) {
     // 引入GSAP
     var {TweenMax, TimelineMax} = require('gsap')
@@ -89,6 +95,10 @@
 
         })
       }
+    },
+
+    computed: {
+      ...mapState(['isMobile'])
     },
 
     methods: {
@@ -178,14 +188,14 @@
         })()
 
 
-        ;(()=>{
+        ;(() => {
           let photosSl = '#trackAnim .track-photo'
           new TimelineLite()
             .set(photosSl, {
               rotationX: '0deg',
               ease: Power1.easeOut
             })
-            .set(photosSl+' .layer', {
+            .set(photosSl + ' .layer', {
               rotationY: '0deg',
               ease: Power1.easeOut
             })
@@ -195,27 +205,30 @@
               rotationX: '-15deg',
               ease: Power1.easeOut
             })
-            .to(photosSl+' .layer', 2, {
+            .to(photosSl + ' .layer', 2, {
               rotationY: '-45deg',
               ease: Power1.easeOut
             }, '-=2')
-            .to(photosSl, 2, {
-              right: '15%',
-              ease: Power1.easeOut,
-            },)
-            .to(photosSl+' .ly03', 2.1, {
-              left: '-50%',
-              opacity: 0.8,
-              boxShadow: '0 0 10px rgba(0, 0, 0, 0.3)'
-            })
-            .to(photosSl+' .ly02', 2.8, {
-              left: '-25%',
-              opacity: 0.8,
-              boxShadow: '0 0 10px rgba(0, 0, 0, 0.3)'
-            }, '-=2.0')
-            .to(photosSl+' .layer', 8, {
 
-            })
+          if (this.isMobile) {
+            tlPhotos.to(photosSl, 2, {
+              right: '-5%',
+              ease: Power1.easeOut
+            },)
+          } else {
+            tlPhotos.to(photosSl, 2, {
+              right: '15%',
+              ease: Power1.easeOut
+            },)
+          }
+
+          tlPhotos.to(photosSl + ' .ly03', 2.1, {
+            left: '-50%',
+          })
+            .to(photosSl + ' .ly02', 2.8, {
+              left: '-25%',
+            }, '-=2.0')
+            .to(photosSl, 8, {})
 
           new ScrollMagic.Scene({
             triggerElement: '#trackAnim',
@@ -245,85 +258,9 @@
   }
 </script>
 
+
 <style lang="stylus">
-  .page-index
-    overflow-x hidden
-    .section-row
-      padding 50px 10px
-      box-sizing border-box
-      line-height: 1.5
-      position: relative
-
-
-      &.section--hero
-        visibility visible
-
-      .track-photo
-        position: absolute
-        top 22%
-        right 40%
-        width 486px
-        height 598px
-        transform-style preserve-3d
-        //transform rotateX(-15deg) rotateY(-45deg)
-        .layer
-          position: absolute
-          top 0
-          left 0
-          width 100%
-          height 100%
-          font-size 300px
-          display flex
-          align-items center
-          justify-content center
-          transform rotateY(-45deg)
-          transform-style preserve-3d
-          will-change transform
-          color: #fff
-
-          &:nth-child(1)
-            background #ff5252
-          &:nth-child(2)
-            background #00c853
-          //transform scale(0.8)
-          &:nth-child(3)
-            background #ffea00
-      //transform scale(0.5)
-
-      &.section--01
-        position: relative
-        z-index 1
-        .block
-          position: absolute
-          width 50px
-          height 50px
-          background magenta
-          box-shadow 0 3px 10px rgba(0,0,0,.23)
-
-        .block1
-          top 40%
-          left 0
-          background #ff80ab
-
-        .block2
-          top 50%
-          right 0
-          background #1de9b6
-
-      &.section--03
-        .bg-layer
-          height 100vh
-          position sticky
-          .box
-            background: repeating-linear-gradient(30deg,
-            #fff, #fff 15px, #f8bbd0 0, #f8bbd0 30px)
-
-            width 200px
-            height 200px
-            margin 50px
-            border-radius 20px
-            box-shadow 0 0 50px #b3b3b3
-        .fg-layer
-          .intro
-            padding-top: 100vh
+  @import "./index.styl"
 </style>
+
+
