@@ -58,8 +58,8 @@
       <div class="content">
         <div class="container">
           <div class="intro">
-            <h1>03. 生，沒有錢，早起的蟲蟲被鳥吃。</h1>
-            <p>他那資質的敏慧，這次我再來歐洲你已經早一個星期回去，誰不曾擁著半夜的孤衾飲泣？別人可以拷貝我的模式，誠信絕對不是一種銷售，記住，創業時期千萬不要找明星團隊，就要找一群人去寫，現在颱風帶來的風，如果九二一發生在台北市，但並不編列特別預算，可是這裡面很多都無關，還要求發卡公司要寄送帳單，以後不會有哪一個政黨、哪一位委員、或哪一個政府部門，這都不是事實，還是將來要用另外一套系統，不會去考慮調漲香菸的價錢以做為來源。</p>
+            <h1>03. 用Sticky布局实现的背景固定</h1>
+            <p>生，沒有錢，早起的蟲蟲被鳥吃。他那資質的敏慧，這次我再來歐洲你已經早一個星期回去，誰不曾擁著半夜的孤衾飲泣？別人可以拷貝我的模式，誠信絕對不是一種銷售，記住，創業時期千萬不要找明星團隊，就要找一群人去寫，現在颱風帶來的風，如果九二一發生在台北市，但並不編列特別預算，可是這裡面很多都無關，還要求發卡公司要寄送帳單，以後不會有哪一個政黨、哪一位委員、或哪一個政府部門，這都不是事實，還是將來要用另外一套系統，不會去考慮調漲香菸的價錢以做為來源。</p>
           </div>
         </div>
       </div>
@@ -67,7 +67,14 @@
     </div>
 
 
-    <div class="section-row fvh"></div>
+    <div class="section-row fvh">
+      <div class="container">
+        <div class="intro">
+          <h1>04. 到底了，去看看其他页面？</h1>
+          <p>占位</p>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -95,6 +102,14 @@
 
         })
       }
+    },
+    beforeDestroy() {
+      // 销毁ScrollMagic
+      if (this.scrController) {
+        this.scrController.destroy(true)
+        console.log('销毁 ScrollMagic 控制器', this.scrController)
+      }
+
     },
 
     computed: {
@@ -247,14 +262,7 @@
 
     },
 
-    beforeDestroy() {
-      // 销毁ScrollMagic
-      if (this.scrController) {
-        this.scrController.destroy(true)
-        console.log('销毁 ScrollMagic 控制器', this.scrController)
-      }
 
-    }
   }
 </script>
 

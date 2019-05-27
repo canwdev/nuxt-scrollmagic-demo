@@ -1,7 +1,7 @@
 <template>
   <div class="links">
     <NLink to="/">首页</NLink>
-    <NLink to="/demo01">demo01</NLink>
+    <NLink to="/ipxs01">ipxs01</NLink>
   </div>
 </template>
 
@@ -13,7 +13,8 @@
     left: 0
     right: 0
     background rgba(0, 0, 0, 0.6)
-    padding 10px 10px
+    padding 0 10px
+    line-height $global_nav_height
     a
       color: #fff
       &:hover

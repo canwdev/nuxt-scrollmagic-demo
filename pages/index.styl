@@ -100,37 +100,39 @@
           box-shadow 0 0 50px rgba(0, 0, 0, 0.33) inset
           *
             transition all 1s
-
-          &:before
-            $wid = 30px
-            width $wid
-            height $wid
-            position: absolute
-            content ' '
-            border-radius 50%
-            background #000
-          &:after
-            $wid = 15px
-            position: absolute
-            top 0
-            left $wid
-            border-left-width ($wid * 5)
-            border-top-width $wid
-            border-bottom-width $wid
-            border-style solid
-            border-color rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0) #000
-            content ' '
-            transform-origin left
-            animation spin 0.5s infinite linear
+          // 特效太花哨了，不用显示出来
+          &.huashao
+            &:before
+              $wid = 30px
+              width $wid
+              height $wid
+              position: absolute
+              content ' '
+              border-radius 50%
+              background #000
+            &:after
+              $wid = 15px
+              position: absolute
+              top 0
+              left $wid
+              border-left-width ($wid * 5)
+              border-top-width $wid
+              border-bottom-width $wid
+              border-style solid
+              border-color rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0) #000
+              content ' '
+              transform-origin left
+              animation spin 0.5s infinite linear
           &.box1
             background: url("/img/spiral03.jpg") no-repeat center/cover
             z-index 1
-            animation spin 1s infinite linear reverse
-            &:hover
-              animation-duration 0.2s
-            &:active
-              animation-duration 0.8s
-              background-image url("/img/spiral02.jpg")
+            animation spin 5s infinite linear reverse
+            &.huashao
+              &:hover
+                animation-duration 1s
+              &:active
+                animation-duration 2s
+                background-image url("/img/spiral02.jpg")
 
           &.box2
             z-index 2
@@ -139,22 +141,23 @@
             width 200px
             height 200px
             background: url("/img/spiral01.png") no-repeat center/cover
-            &:active
-              background-image url("/img/spiral03.jpg")
-            &:hover
-              animation-duration 0.2s
-            animation spin 0.5s infinite linear
-            &:before
-              $wid = 10px
-              width $wid
-              height $wid
-            &:after
-              $wid = 5px
-              animation-duration 0.2s
-              left $wid
-              border-left-width ($wid * 5)
-              border-top-width $wid
-              border-bottom-width $wid
+            animation spin 3s infinite linear
+            &.huashao
+              &:active
+                background-image url("/img/spiral03.jpg")
+              &:hover
+                animation-duration 1s
+              &:before
+                $wid = 10px
+                width $wid
+                height $wid
+              &:after
+                $wid = 5px
+                animation-duration 0.2s
+                left $wid
+                border-left-width ($wid * 5)
+                border-top-width $wid
+                border-bottom-width $wid
 
       .content
         color: #fff
