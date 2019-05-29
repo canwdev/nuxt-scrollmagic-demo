@@ -10,16 +10,33 @@
     padding-top: 10vh
     .hardware-aligner
 
-      $xsmax_w = 29.4%
-      $xs_w = 27%
+      $xsmax_w = 18.816%
+      $xs_w = 17.28%
+      $xsmax_w_tablet = 29.4%
+      $xs_w_tablet = 27%
+      position: relative
+
+      .iphone8-models
+        display: flex;
+        justify-content center
+        .hardware-8
+          width $xsmax_w
+          @media screen and (max-width $tablet_width)
+            width $xsmax_w_tablet
 
       .iphonexs-models
-        position: relative
+        position: absolute
+        top 0
+        left 0
+        right 0
+        bottom 0
         .scaling-hardware
           margin 0 auto
-          width ($xsmax_w + 1%)
+          width $xsmax_w
           position: relative
           z-index 1
+          @media screen and (max-width $tablet_width)
+            width $xsmax_w_tablet
         .sliding-hardware
           position: absolute
           top 0
@@ -29,13 +46,19 @@
           .hardware-iphonexsmax
             position: absolute
             bottom 0
-            left 15px
+            left 19%
             z-index 1
             width $xsmax_w
+            @media screen and (max-width $tablet_width)
+              left 2%
+              width $xsmax_w_tablet
           .hardware-iphonexs
             position: absolute
             bottom 0
-            right 15px
+            right 21%
             z-index 2
             width $xs_w
+            @media screen and (max-width $tablet_width)
+              right 3.5%
+              width $xs_w_tablet
 

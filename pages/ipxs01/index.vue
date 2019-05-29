@@ -22,7 +22,9 @@
         <div class="hardware-aligner">
 
           <div class="iphone8-models">
-
+            <div class="hardware hardware-8">
+              <img src="~/assets/img/cupertino/models/screen_display_iphone8plus_large.jpg">
+            </div>
           </div>
 
           <div class="iphonexs-models">
@@ -95,9 +97,9 @@
 
           let scalingSl = '#sfx1 .scaling-hardware'
           let tlScaling = new TimelineMax()
-            .from(scalingSl, 1, {width: '100%', transformOrigin: 'top'})
+            .from(scalingSl, 1, {width: '100%', transformOrigin: 'top', ease: Power0.easeIn})
             .to(scalingSl, 1, {yPercent: -20}, '-=1')
-            .to(scalingSl, 1, {yPercent: 0}, '1')
+            .to(scalingSl, 1, {yPercent: 0}, )
 
           let timeline1 = new TimelineMax().add([tlShadow, tlScaling])
 
@@ -113,11 +115,21 @@
 
           // 第二阶段：固定屏幕，文字显示，Xs和XsMax展开，文字消失，出现Phone8和底部文字
 
+          let ip8Sl = '#sfx1 .hardware-8'
           let xsMaxSl = '#sfx1 .hardware-iphonexsmax'
           let xsSl = '#sfx1 .hardware-iphonexs'
           new TimelineMax()
-            .set(xsMaxSl, {left: '35.6%', autoAlpha: 0})
-            .set(xsSl, {right: '36%', autoAlpha: 0})
+            .set(xsMaxSl, {xPercent: 112, autoAlpha: 0})
+            .set(xsSl, {xPercent: -120, autoAlpha: 0})
+            .set(ip8Sl, {autoAlpha: 0})
+
+          let tlSplitting = new TimelineMax()
+            .to(scalingSl, 0.2, {autoAlpha: 0})
+            .to([xsMaxSl, xsSl], 0.2, {autoAlpha: 1}, '-=0.2')
+            .to(xsMaxSl, 1, {xPercent: 0})
+            .to(xsSl, 1, {xPercent: 0}, '-=1')
+            .to(ip8Sl, 0.5, {autoAlpha: 1}, '-=0.5')
+            .to(ip8Sl, 1, {})
 
           new ScrollMagic.Scene({
             triggerElement: sfx1CwSl,
@@ -125,17 +137,12 @@
             triggerHook: 0
           })
             .setPin(sfx1CwSl)
-            .addIndicators()
+            .setTween(tlSplitting)
+            // .addIndicators()
             .addTo(this.scrController)
             .on('enter', () => {
-              new TimelineMax().to(scalingSl, 0.5, {autoAlpha: 0})
-              new TimelineMax().to(xsMaxSl, 0.5, {autoAlpha: 1})
-              new TimelineMax().to(xsSl, 0.5, {autoAlpha: 1})
             })
             .on('leave', () => {
-              new TimelineMax().to(scalingSl, 0.5, {autoAlpha: 1})
-              new TimelineMax().to(xsMaxSl, 0.5, {autoAlpha: 0})
-              new TimelineMax().to(xsSl, 0.5, {autoAlpha: 0})
             })
 
         })()
