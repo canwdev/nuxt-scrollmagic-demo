@@ -82,12 +82,12 @@
   import {mapState} from 'vuex'
 
   if (process.client) {
-    // 引入GSAP
+    // Import GSAP
     var {TweenMax, TimelineMax} = require('gsap')
 
-    // 引入ScrollMagic
+    // Import ScrollMagic
     var ScrollMagic = require('scrollmagic')
-    // 使用imports-loader解决webpack神坑
+    // 使用 imports-loader 解决 webpack神坑
     // https://www.reddit.com/r/Frontend/comments/4dshb8/new_to_webpack_problem_using_scrollmagic_gsap/
     require('imports-loader?define=>false!scrollmagic/scrollmagic/minified/plugins/animation.gsap.min')
     require('imports-loader?define=>false!scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min')
