@@ -1,6 +1,6 @@
-# scroll-demo
+# Use ScrollMagic & GSAP in Nuxt.js Demo
 
-> My Amazing Scroll Demo Project
+> 在 Nuxt.js 中使用 ScrollMagic 与 GSAP
 
 ## Build Setup
 

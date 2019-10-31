@@ -71,7 +71,7 @@
       <div class="container">
         <div class="intro">
           <h1>04. 到底了，去看看其他页面？</h1>
-          <p>占位</p>
+          <p><NLink to="/ipxs01">Go to PhoneXS scroll demo</NLink></p>
         </div>
       </div>
     </div>
