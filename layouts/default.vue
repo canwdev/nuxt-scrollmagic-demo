@@ -1,19 +1,9 @@
 <template>
-  <div>
-    <vLinks></vLinks>
-    <nuxt />
-  </div>
+  <nuxt />
 </template>
 
 <script>
-
-
-  import vLinks from '~/components/links'
-
   export default {
-    components: {
-      vLinks
-    },
     mounted() {
       if (process.client) {
         this.adjustMobile()

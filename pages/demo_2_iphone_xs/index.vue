@@ -65,9 +65,12 @@
 <script>
 
   if (process.client) {
-    var {TweenMax, TimelineMax} = require('gsap')
+    // var {TweenMax, TimelineMax} = require('gsap')
+    const gsap = require('gsap')
+    console.log(gsap)
+    const TweenMax = gsap
 
-    var ScrollMagic = require('scrollmagic')
+    const ScrollMagic = require('scrollmagic')
     require('imports-loader?define=>false!scrollmagic/scrollmagic/minified/plugins/animation.gsap.min')
     require('imports-loader?define=>false!scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min')
   }
@@ -92,16 +95,16 @@
 
         ;(() => {
           // 第一阶段：放大后缩小
-          let tlShadow = new TimelineMax()
+          let tlShadow = gsap.timeline()
             .from('#sfx1 .manifesto-shadow', 1, {autoAlpha: 0})
 
           let scalingSl = '#sfx1 .scaling-hardware'
-          let tlScaling = new TimelineMax()
+          let tlScaling = gsap.timeline()
             .from(scalingSl, 1, {width: '100%', transformOrigin: 'top', ease: Power0.easeIn})
             .to(scalingSl, 1, {yPercent: -20}, '-=1')
             .to(scalingSl, 1, {yPercent: 0}, )
 
-          let timeline1 = new TimelineMax().add([tlShadow, tlScaling])
+          let timeline1 = gsap.timeline().add([tlShadow, tlScaling])
 
           let sfx1CwSl = '#sfx1 .compare-wrap'
           new ScrollMagic.Scene({
@@ -118,12 +121,12 @@
           let ip8Sl = '#sfx1 .hardware-8'
           let xsMaxSl = '#sfx1 .hardware-iphonexsmax'
           let xsSl = '#sfx1 .hardware-iphonexs'
-          new TimelineMax()
+          gsap.timeline()
             .set(xsMaxSl, {xPercent: 112, autoAlpha: 0})
             .set(xsSl, {xPercent: -120, autoAlpha: 0})
             .set(ip8Sl, {autoAlpha: 0})
 
-          let tlSplitting = new TimelineMax()
+          let tlSplitting = gsap.timeline()
             .to(scalingSl, 0.2, {autoAlpha: 0})
             .to([xsMaxSl, xsSl], 0.2, {autoAlpha: 1}, '-=0.2')
             .to(xsMaxSl, 1, {xPercent: 0})
