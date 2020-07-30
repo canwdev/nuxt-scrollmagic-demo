@@ -63,14 +63,15 @@
 </template>
 
 <script>
-
   if (process.client) {
-    // var {TweenMax, TimelineMax} = require('gsap')
-    const gsap = require('gsap')
-    console.log(gsap)
-    const TweenMax = gsap
+    // Import GSAP3
+    const {gsap} = require("gsap");
+    gsap.install(window); // Fix ScrollMagic with GSAP3
 
-    const ScrollMagic = require('scrollmagic')
+    // Import ScrollMagic
+    var ScrollMagic = require('scrollmagic')
+    // 使用 imports-loader 解决 webpack神坑
+    // https://www.reddit.com/r/Frontend/comments/4dshb8/new_to_webpack_problem_using_scrollmagic_gsap/
     require('imports-loader?define=>false!scrollmagic/scrollmagic/minified/plugins/animation.gsap.min')
     require('imports-loader?define=>false!scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min')
   }

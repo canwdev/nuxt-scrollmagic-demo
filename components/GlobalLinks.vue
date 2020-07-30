@@ -1,11 +1,24 @@
 <template>
-  <div class="links">
-    <NLink
-      v-for="(item, index) in links"
-      :key="index"
-      :to="item.to"
-      target="_blank"
-    >{{ item.title }}</NLink>
+  <div class="links-container">
+    <h1>Demos</h1>
+    <div class="links-wrap">
+      <NLink
+        class="link-item"
+        v-for="(item, index) in links"
+        :key="index"
+        :to="item.to"
+      >{{ item.title }}
+      </NLink>
+    </div>
+
+    <h1>Documents</h1>
+    <div class="links-wrap">
+      <ul>
+        <li><a target="_blank" href="https://scrollmagic.io/">ScrollMagic</a></li>
+        <li><a target="_blank" href="https://greensock.com/3-migration">GSAP3 升级指南</a></li>
+        <li><a target="_blank" href="https://greensock.com/gsap3-features">Top 5 Features of GSAP 3</a></li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -24,7 +37,11 @@
 </script>
 
 <style lang="stylus" scoped>
-  .links {
+  .links-container {
+    max-width 500px
+    margin 0 auto
+  }
+  .links-wrap {
     max-width 500px
     margin 30px auto
     background $colorGrey
@@ -38,17 +55,26 @@
       display inline-flex
       align-items: center;
       justify-content: center;
-      width: 100px
       height: 50px
       text-align: center;
       color: $colorBlack
-      text-decoration: none
+      text-decoration: underline
+      padding 0 10px
+
+      &.link-item {
+        text-decoration: none
+        width: 100px
+      }
 
       &:hover {
         color: $colorTheme
         background $colorWhite
         border-radius $borderRadius
       }
+    }
+
+    ul {
+      width: 100%
     }
   }
 </style>

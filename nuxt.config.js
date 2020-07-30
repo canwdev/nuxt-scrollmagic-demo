@@ -28,11 +28,12 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    '~/assets/css/reset.styl',
+    '~/assets/css/normalize.css',
+    '~/assets/css/base.styl',
   ],
   styleResources: {
     // stylus
-    stylus: ['~/assets/css/base.styl']
+    stylus: ['~/assets/css/variables.styl']
   },
 
   /*
@@ -57,7 +58,7 @@ module.exports = {
     ** You can extend webpack config here
     */
     extend(config, ctx) {
-      
+
     }
   }
 }
