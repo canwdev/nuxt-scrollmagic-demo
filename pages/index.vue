@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="home-page">
     <GlobalLinks></GlobalLinks>
   </div>
 </template>
@@ -13,3 +13,9 @@
     },
   }
 </script>
+
+<style scoped>
+  .home-page {
+    margin-top: 100px;
+  }
+</style>

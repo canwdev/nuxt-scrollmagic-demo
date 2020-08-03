@@ -1,16 +1,17 @@
 <template>
   <div class="page-common cupertino-page black">
+    <AppleNavBar/>
 
-    <div class="section-row fcenter fvh section--00">
-      <div class="container">
+    <div class="section-row flex f-aic height-100vh section-00">
+      <div class="container-auto">
         <div class="intro">
           <h1 style="text-align: center;">大屏幕上见。</h1>
         </div>
       </div>
     </div>
 
-    <div id="sfx1" class="section-row section--01">
-      <div class="container intro-wrap">
+    <div id="sfx1" class="section-row section-01">
+      <div class="container-auto intro-wrap">
         <div class="intro texture texture-1">
           <h2>超视网膜显示屏，两款大作一起登场。</h2>
           <p>它们经过精心定制，是 iPhone 色彩精准度最高的 OLED 显示屏，支持 HDR 显示，并能呈现真实深邃的黑色。其中，iPhone XS Max 更拥有 iPhone 迄今最大的显示屏。</p>
@@ -50,8 +51,8 @@
       </div>
     </div>
 
-    <div class="section-row fcenter fvh  section--02">
-      <div class="container">
+    <div class="section-row flex f-aic height-100vh  section-02">
+      <div class="container-auto">
         <div class="intro texture texture-2">
           <h2>材质样样出众。</h2>
           <p>iPhone 迄今最坚固耐用的玻璃面板，由原子级工艺造就的夺目新款金色外观，精密打造的手术级不锈钢边框，以及更胜以往的抗水防尘特性<sup>2</sup>。</p>
@@ -77,6 +78,8 @@
   }
 
   export default {
+    components: {
+    },
     head: {
       title: 'Phone Xs - Apple'
     },
@@ -157,6 +160,6 @@
 </script>
 
 <style lang="stylus" scoped>
-  @import "~assets/css/cupertino.styl"
+  @import "./cupertino.styl"
   @import "./style.styl"
 </style>

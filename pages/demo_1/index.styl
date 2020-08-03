@@ -8,7 +8,7 @@
     position: relative
 
 
-    &.section--hero
+    &.section-hero
       visibility visible
 
     .track-photo
@@ -41,6 +41,7 @@
         transform rotateY(-45deg)
         transform-style preserve-3d
         will-change transform
+        box-shadow: $boxShadow
 
         &:nth-child(1)
           background #f44336
@@ -57,7 +58,7 @@
 
     //transform scale(0.5)
 
-    &.section--01
+    &.section-01
       position: relative
       z-index 1
       overflow-x hidden
@@ -79,7 +80,7 @@
         right 0
         background #1de9b6
 
-    &.section--03
+    &.section-03
       padding 0
       .sticky
         position sticky

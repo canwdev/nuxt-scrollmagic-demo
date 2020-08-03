@@ -1,9 +1,8 @@
 <template>
-  <!--  假文 by http://more.handlino.com/-->
   <div class="page-index page-common">
     <div style="height: 100vh; position: relative; z-index: 0">
-      <div id="sectionHero" class="section-row fvh fcenter section--hero">
-        <div class="container">
+      <div id="sectionHero" class="section-row height-100vh flex f-aic section-hero">
+        <div class="container-auto">
           <div class="intro">
             <h1>00. 给岁月以文明，而不是给文明以岁月。</h1>
             <p>其实，从这个位置上看，整个宇宙的运动都被距离抹去了，远去的太阳和飞船前方的银河系星海也处于永恒的静止中，时间似乎停止了流动。</p>
@@ -12,11 +11,11 @@
       </div>
     </div>
 
-    <div id="section01" class="section-row fvh bg-grey section--01">
+    <div id="section01" class="section-row height-100vh bg-grey section-01">
       <div class="block block1"></div>
       <div class="block block2"></div>
 
-      <div class="container">
+      <div class="container-auto">
         <div class="intro">
           <h1>01. 方寸之间，深不见底啊。</h1>
           <p class="para">
@@ -25,7 +24,7 @@
       </div>
     </div>
 
-    <div class="section-row fvh">
+    <div class="section-row height-100vh">
       <div id="trackAnim" class="bg-layer">
 
         <div class="track-photo">
@@ -37,8 +36,8 @@
       </div>
     </div>
 
-    <div class="section-row fvh fcenter section--02">
-      <div class="container">
+    <div class="section-row height-100vh flex f-aic section-02">
+      <div class="container-auto">
         <div class="intro">
           <h1>02. 不择手段地前进！</h1>
           <p>
@@ -47,15 +46,15 @@
       </div>
     </div>
 
-    <div class="section-row bg-grey section--03">
+    <div class="section-row bg-grey section-03">
       <div class="sticky">
-        <div class="container">
-          <h1 class="box huashao box1">任何超脱飞扬的思想都会砰然坠地，因为现实的引力太沉重了。</h1>
+        <div class="container-auto">
+          <h1 class="box huashao box1">在中国，任何超脱飞扬的思想都会砰然坠地，因为现实的引力太沉重了。</h1>
         </div>
       </div>
 
       <div class="content">
-        <div class="container">
+        <div class="container-auto">
           <div class="intro">
             <h1>03. 红岸基地原址</h1>
             <p>
@@ -67,13 +66,13 @@
     </div>
 
 
-    <div class="section-row fvh">
-      <div class="container">
+    <div class="section-row height-100vh">
+      <div class="container-auto">
         <div class="intro">
           <h1>04. 不要返航，这里不是家！</h1>
           <p>
             宇宙的熵在升高，有序度在降低，像平衡鹏那无边无际的黑翅膀，向存在的一切压下来，压下来。可是低熵体不一样，低熵体的熵还在降低，有序度还在上升，像漆黑海面上升起的磷火，这就是意义，最高层的意义，比乐趣的意义层次要高。要维持这种意义，低熵体就必须存在和延续。
-            <NLink to="/">返 航</NLink>
+            <NLink to="/">Back Home</NLink>
           </p>
 
           <SpiralRound :huashao="true"/>
@@ -103,7 +102,7 @@
 
   export default {
     components: {
-      SpiralRound
+      SpiralRound,
     },
     mounted() {
       if (process.client) {
@@ -139,7 +138,7 @@
           duration: '100%',
           triggerHook: 0
         }).setPin('#sectionHero')
-          .setTween('#sectionHero .container', {
+          .setTween('#sectionHero .container-auto', {
             // y: '-300%',
             scale: 0.8,
             color: '$colorWhite'

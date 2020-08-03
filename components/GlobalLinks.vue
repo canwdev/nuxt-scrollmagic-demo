@@ -1,5 +1,5 @@
 <template>
-  <div class="links-container">
+  <div class="links-container-auto">
     <h1>Demos</h1>
     <div class="links-wrap">
       <NLink
@@ -37,7 +37,7 @@
 </script>
 
 <style lang="stylus" scoped>
-  .links-container {
+  .links-container-auto {
     max-width 500px
     margin 0 auto
   }
@@ -50,6 +50,9 @@
     padding 10px
     box-sizing border-box
     flex-wrap wrap
+    background-color: #f8f8f8;
+    border: 1px solid #c6c6c6;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
 
     a {
       display inline-flex
@@ -60,6 +63,8 @@
       color: $colorBlack
       text-decoration: underline
       padding 0 10px
+      border-radius $borderRadius
+      border: 1px solid transparent;
 
       &.link-item {
         text-decoration: none
@@ -69,7 +74,8 @@
       &:hover {
         color: $colorTheme
         background $colorWhite
-        border-radius $borderRadius
+        border-color #dfe1e5;
+
       }
     }
 

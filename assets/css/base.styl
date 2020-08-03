@@ -2,13 +2,27 @@ body {
   margin 0
 }
 
-.container
+.flex {
+  display flex
+}
+
+.f-aic {
+  align-items center
+}
+
+.f-jcc {
+  justify-content: center;
+}
+
+.container-auto
   width 1200px
   margin 0 auto
+  padding 0 10px
   @media screen and (max-width 1200px)
     width 98%
   @media screen and (max-width $tablet_width)
     width 100%
+
 
 .page-common
   .section-row
@@ -26,13 +40,10 @@ body {
     &.bg-grey
       background $colorGrey
 
-    &.fcenter
-      display flex
-      align-items center
-
-    &.fvh
+    &.height-100vh
       height 100vh
-    &.fvh2
+
+    &.height-200vh
       height 200vh
 
     .intro

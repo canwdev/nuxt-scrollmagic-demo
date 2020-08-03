@@ -1,9 +1,18 @@
 <template>
-  <nuxt />
+  <div id="root">
+    <AppleNavBar/>
+    <nuxt />
+  </div>
 </template>
 
 <script>
+  import AppleNavBar from "~/components/AppleNavBar"
+
   export default {
+
+    components: {
+      AppleNavBar
+    },
     mounted() {
       if (process.client) {
         this.adjustMobile()
