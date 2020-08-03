@@ -5,8 +5,8 @@
       <div id="sectionHero" class="section-row fvh fcenter section--hero">
         <div class="container">
           <div class="intro">
-            <h1>00. Hello World</h1>
-            <p>他，在學期末之後，架構了一個網站寫好原始碼之後過來打分數，看似完美，在學期末之後，但從頭到尾那些網頁也不是他自己寫的</p>
+            <h1>00. 给岁月以文明，而不是给文明以岁月。</h1>
+            <p>其实，从这个位置上看，整个宇宙的运动都被距离抹去了，远去的太阳和飞船前方的银河系星海也处于永恒的静止中，时间似乎停止了流动。</p>
           </div>
         </div>
       </div>
@@ -18,9 +18,9 @@
 
       <div class="container">
         <div class="intro">
-          <h1>01. 還不賴，還不賴，還不賴？</h1>
+          <h1>01. 方寸之间，深不见底啊。</h1>
           <p class="para">
-            還不賴，還不賴，還不賴，還不賴？我們多長一歲年紀往往只是加重我們頭上的枷，同時她們講你生前的故事，留下在我們心頭的只是些揶揄的鬼影；我們在這道上偶爾停步迴想的時候，耳不塞，扮一個漁翁，圓滿這全程的寂寞，雪西裡與普陀山，你才知道靈魂的愉快是怎樣的，單是活著的快樂是怎樣的，身影似的不可解脫。</p>
+            不同维度之间没有黑暗森林，低维威胁不到高维，低维的资源对高维没有用。但同维的都是黑暗森林。死亡是唯一一座永远亮着的灯塔，不管你向哪里航行，最终都得转向它指引的方向。一切都会逝去，只有死神永生。</p>
         </div>
       </div>
     </div>
@@ -40,9 +40,9 @@
     <div class="section-row fvh fcenter section--02">
       <div class="container">
         <div class="intro">
-          <h1>02. 看似完美，…</h1>
+          <h1>02. 不择手段地前进！</h1>
           <p>
-            請他的交通大學資訊工程系朋友幫忙他，在學期末之後，架構了一個網站寫好原始碼之後過來打分數，看似完美，在學期末之後，但從頭到尾那些網頁也不是他自己寫的，我一個商學院的朋友打給我，而他想幫我介紹一下，混合這些，或許整個世界根本沒有感覺，以及進入最穩定大公司當工程師的機會？</p>
+            任何东西都不可能挡住它后面的东西，任何封闭体的内部也都是能看到的。由于光速不可超越，如果光出不去，那就什么都出不去，没有任何东西可以飞出太阳系黑洞的视界，这个星系将与宇宙的其余部分彻底隔绝，变成一个绝对封闭的世界。</p>
         </div>
       </div>
     </div>
@@ -50,17 +50,16 @@
     <div class="section-row bg-grey section--03">
       <div class="sticky">
         <div class="container">
-          <div class="box box1"></div>
-          <div class="box box2"></div>
+          <h1 class="box huashao box1">任何超脱飞扬的思想都会砰然坠地，因为现实的引力太沉重了。</h1>
         </div>
       </div>
 
       <div class="content">
         <div class="container">
           <div class="intro">
-            <h1>03. 用Sticky布局实现的背景固定</h1>
+            <h1>03. 红岸基地原址</h1>
             <p>
-              生，沒有錢，早起的蟲蟲被鳥吃。他那資質的敏慧，這次我再來歐洲你已經早一個星期回去，誰不曾擁著半夜的孤衾飲泣？別人可以拷貝我的模式，誠信絕對不是一種銷售，記住，創業時期千萬不要找明星團隊，就要找一群人去寫，現在颱風帶來的風，如果九二一發生在台北市，但並不編列特別預算，可是這裡面很多都無關，還要求發卡公司要寄送帳單，以後不會有哪一個政黨、哪一位委員、或哪一個政府部門，這都不是事實，還是將來要用另外一套系統，不會去考慮調漲香菸的價錢以做為來源。</p>
+              叶文洁不知道，就在这时，地球文明向太空发出的第一声能够被听到的啼鸣，已经以太阳为中心，以光速飞向整个宇宙。恒星级功率的强劲电波，如磅礴的海潮，此时已越过了木星轨道。 这时，在12000兆赫波段上，太阳是银河系中最亮的一颗星。</p>
           </div>
         </div>
       </div>
@@ -71,10 +70,14 @@
     <div class="section-row fvh">
       <div class="container">
         <div class="intro">
-          <h1>04. 到底了，去看看其他页面？</h1>
+          <h1>04. 不要返航，这里不是家！</h1>
           <p>
-            <NLink to="/">Back Home</NLink>
+            宇宙的熵在升高，有序度在降低，像平衡鹏那无边无际的黑翅膀，向存在的一切压下来，压下来。可是低熵体不一样，低熵体的熵还在降低，有序度还在上升，像漆黑海面上升起的磷火，这就是意义，最高层的意义，比乐趣的意义层次要高。要维持这种意义，低熵体就必须存在和延续。
+            <NLink to="/">返 航</NLink>
           </p>
+
+          <SpiralRound :huashao="true"/>
+          <SpiralRound :huashao="true" type="2"/>
         </div>
       </div>
     </div>
@@ -83,6 +86,7 @@
 
 <script>
   import {mapState} from 'vuex'
+  import SpiralRound from '~/components/SpiralRound'
 
   if (process.client) {
     // Import GSAP3
@@ -98,6 +102,9 @@
   }
 
   export default {
+    components: {
+      SpiralRound
+    },
     mounted() {
       if (process.client) {
         this.$nextTick(() => {
