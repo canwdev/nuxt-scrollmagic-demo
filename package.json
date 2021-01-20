@@ -14,7 +14,7 @@
     "@nuxtjs/pwa": "^2.6.0",
     "@nuxtjs/style-resources": "^0.1.2",
     "cross-env": "^7.0.2",
-    "gsap": "^3.4.2",
+    "gsap": "^3.6.0",
     "imports-loader": "^0.8.0",
     "nuxt": "^2.13.3",
     "scrollmagic": "^2.0.7",
