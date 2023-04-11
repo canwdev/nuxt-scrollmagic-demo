@@ -1,3 +1,14 @@
+20230411更新：推荐使用 GSAP 的 ScrollTrigger 插件来代替 ScrollMagic
+
+- GSAP [ScrollTrigger](https://greensock.com/scrolltrigger/)
+	- [一些横向滚动示例](https://greensock.com/forums/topic/28457-gsap-scrolltrigger-horizontal-scroll-timeline-animation/)
+	- https://css-tricks.com/gsap-flip-plugin-for-animation/
+	- https://greensock.com/docs/v3/GSAP/Timeline
+	- https://greensock.com/st-mistakes/
+	- https://greensock.com/mistakes/
+
+---
+
 # Use ScrollMagic & GSAP in Nuxt.js Demo
 
 > 在 Nuxt.js 中使用 ScrollMagic 与 GSAP
